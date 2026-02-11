@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.center{
+.center {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -30,10 +30,22 @@
   padding: 20px;
   border: 3px solid #535bf2;
   border-radius: 12px;
-  width: 300px;
-  min-height: 200px;
+  width: 400px;
+  height: 300px;
+  /* The 3agic happens here */
+  overflow-y: auto;
+  word-wrap: break-word; /* Ensures long words don't break the layout */
 }
 
+/* Optional: Make the scrollbar look a bit cleaner */
+.box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+  background: #646cff;
+  border-radius: 4px;
+}
 .d {
   display: flex;
   justify-content: center;
@@ -55,7 +67,6 @@ body {
   margin: 0;
   place-items: center;
   min-height: 100vh;
-
 }
 
 h1 {
